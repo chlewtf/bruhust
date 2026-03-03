@@ -1,0 +1,5 @@
+lowkey i be 1
+slay i <= 5 {
+    yeet i
+    hits_diff i be i + 1
+}

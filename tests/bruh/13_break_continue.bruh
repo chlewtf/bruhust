@@ -1,0 +1,11 @@
+lowkey i be 0
+slay i < 10 {
+    hits_diff i be i + 1
+    fr_fr i == 3 {
+        periodt
+    }
+    fr_fr i == 6 {
+        ghosted
+    }
+    yeet i
+}

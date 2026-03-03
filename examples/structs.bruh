@@ -1,0 +1,50 @@
+// structs.bruh - Sheesh, structs are hitting different 💅
+
+sheesh Person {
+    name: str,
+    age: int,
+    rizz_level: int
+}
+
+bussin roast(p: Person) -> str {
+    vibe p.rizz_level > 8 {
+        rizz p.name + " is absolutely snatched fr fr"
+    } orcap vibe p.rizz_level > 5 {
+        rizz p.name + " is lowkey bussin"
+    } orcap {
+        rizz p.name + " is kinda mid ngl"
+    }
+}
+
+bussin birthday(p: Person) -> int {
+    rizz p.age + 1
+}
+
+// Create some people
+lowkey chad = Person { name: "Chad", age: 21, rizz_level: 9 }
+lowkey kevin = Person { name: "Kevin", age: 19, rizz_level: 3 }
+lowkey aria = Person { name: "Aria", age: 22, rizz_level: 7 }
+
+yeet "=== Rizz Report 📊 ==="
+yeet roast(chad)
+yeet roast(kevin)
+yeet roast(aria)
+
+yeet ""
+yeet "=== After Birthday ==="
+yap chad.name
+yap " will be "
+yeet birthday(chad)
+
+// Array of people 
+lowkey squad = [chad, kevin, aria]
+yeet ""
+yeet "=== Squad Members ==="
+slay member in squad {
+    yap "Name: "
+    yap member.name
+    yap " | Age: "
+    yap str(member.age)
+    yap " | Rizz: "
+    yeet member.rizz_level
+}

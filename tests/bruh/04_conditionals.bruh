@@ -1,0 +1,11 @@
+no_cap x be 42
+fr_fr x > 40 {
+    yeet "slaying"
+} nah {
+    yeet "mid"
+}
+fr_fr x == 0 {
+    yeet "zero"
+} nah {
+    yeet "nonzero"
+}

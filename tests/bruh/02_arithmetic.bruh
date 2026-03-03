@@ -1,0 +1,7 @@
+no_cap a be 10
+no_cap b be 3
+yeet a + b
+yeet a - b
+yeet a * b
+yeet a / b
+yeet a % b

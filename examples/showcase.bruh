@@ -1,0 +1,122 @@
+// showcase.bruh - Full showcase of Bruhust's drip 💧
+
+// ─── Variables ───────────────────────────────────────────────
+lowkey vibe_score = 100
+highkey MAX_RIZZ: int = 9000
+lowkey catchphrase: str = "it's giving main character energy"
+lowkey is_snatched: bool = nocap
+
+yeet "=== BRUHUST SHOWCASE 💅 ==="
+yeet ""
+
+// ─── Conditionals ────────────────────────────────────────────
+yeet "1. Vibe Check"
+vibe vibe_score > 9000 {
+    yeet "   Lowkey over 9000?!"
+} orcap vibe vibe_score >= 100 {
+    yeet "   Highkey snatched (score >= 100) ✅"
+} orcap {
+    yeet "   Kinda mid ngl"
+}
+
+// ─── Loops ───────────────────────────────────────────────────
+yeet ""
+yeet "2. Slay Loop"
+yap "   Counting: "
+slay i in 1..6 {
+    yap str(i)
+    yap " "
+}
+yeet ""
+
+// ─── Arrays ──────────────────────────────────────────────────
+yeet ""
+yeet "3. Arrays Bussin"
+lowkey drip = ["gucci", "prada", "versace", "supreme"]
+yap "   Drip count: "
+yeet len(drip)
+drip = push(drip, "off-white")
+yap "   After push: "
+yeet drip
+
+// ─── Match ───────────────────────────────────────────────────
+yeet ""
+yeet "4. Based (Match)"
+lowkey mood = 3
+based mood {
+    1 => yeet "   It's giving Monday energy (yikes)"
+    2 => yeet "   Lowkey meh"
+    3 => yeet "   Highkey vibing rn ✨"
+    4 => yeet "   Absolutely snatched"
+    _ => yeet "   Idk bestie"
+}
+
+// ─── Functions ───────────────────────────────────────────────
+yeet ""
+yeet "5. Bussin Functions"
+
+bussin clap_back(roast: str) -> str {
+    rizz "No u, " + roast
+}
+
+bussin sum_array(arr: [int]) -> int {
+    lowkey total = 0
+    slay n in arr {
+        total += n
+    }
+    rizz total
+}
+
+yeet "   " + clap_back("you're mid")
+lowkey nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+yap "   Sum 1-10: "
+yeet sum_array(nums)
+
+// ─── While ───────────────────────────────────────────────────
+yeet ""
+yeet "6. Vibecheck (While)"
+lowkey n = 1
+lowkey result = 1
+vibecheck n <= 7 {
+    result = result * n
+    n += 1
+}
+yap "   7! (factorial) = "
+yeet result
+
+// ─── Type Casting ─────────────────────────────────────────────
+yeet ""
+yeet "7. ItsGiving (Type Cast)"
+lowkey pi_int = 3
+lowkey pi_float = pi_int itsgiving float
+yap "   int -> float: "
+yeet pi_float
+
+// ─── Error Handling ───────────────────────────────────────────
+yeet ""
+yeet "8. Error handling (oof)"
+bussin safe_div(a: int, b: int) -> int {
+    vibe b == 0 {
+        oof "Division by zero is NOT bussin"
+    }
+    rizz a / b
+}
+yap "   10 / 2 = "
+yeet safe_div(10, 2)
+
+// ─── Nested Functions ─────────────────────────────────────────
+yeet ""
+yeet "9. Nested bussin"
+bussin outer(x: int) -> int {
+    bussin inner(y: int) -> int {
+        rizz y * y
+    }
+    rizz inner(x) + x
+}
+yap "   outer(5) = inner(5) + 5 = 25 + 5 = "
+yeet outer(5)
+
+yeet ""
+yeet "╔════════════════════════════════╗"
+yeet "║  Bruhust slays fr fr 💅🔥✨   ║"
+yeet "╚════════════════════════════════╝"

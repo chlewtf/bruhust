@@ -1,0 +1,6 @@
+no_cap nums be sheesh(0, 5)
+lowkey i be 0
+slay i < no_thoughts nums {
+    yeet drip nums[i]
+    hits_diff i be i + 1
+}

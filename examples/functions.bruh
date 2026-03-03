@@ -1,0 +1,31 @@
+rent_free Functions in Bruhust
+
+sus greet(name) {
+    bet "yo " + name + ", you ate that 🔥"
+}
+
+sus factorial(n) {
+    fr_fr n <= 1 {
+        bet 1
+    }
+    bet n * rizz factorial(n - 1)
+}
+
+yeet rizz greet("bestie")
+yeet rizz factorial(5)
+
+rent_free Fibonacci
+sus fib(n) {
+    fr_fr n <= 1 {
+        bet n
+    }
+    bet rizz fib(n - 1) + rizz fib(n - 2)
+}
+
+no_cap i be 0
+slay i < 8 {
+    yeet_raw rizz fib(i)
+    yeet_raw " "
+    hits_diff i be i + 1
+}
+yeet ""

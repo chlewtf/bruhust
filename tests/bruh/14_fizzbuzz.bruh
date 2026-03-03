@@ -1,0 +1,17 @@
+no_cap i be 1
+slay i <= 15 {
+    fr_fr i % 15 == 0 {
+        yeet "FizzBuzz"
+    } nah {
+        fr_fr i % 3 == 0 {
+            yeet "Fizz"
+        } nah {
+            fr_fr i % 5 == 0 {
+                yeet "Buzz"
+            } nah {
+                yeet vibe i
+            }
+        }
+    }
+    hits_diff i be i + 1
+}

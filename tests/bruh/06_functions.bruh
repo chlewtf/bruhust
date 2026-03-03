@@ -1,0 +1,8 @@
+sus double(n) {
+    bet n * 2
+}
+sus greet(name) {
+    bet "yo " + name
+}
+yeet rizz double(7)
+yeet rizz greet("bestie")

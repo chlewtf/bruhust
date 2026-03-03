@@ -1,0 +1,32 @@
+rent_free Arrays and loops in Bruhust
+
+lowkey vibes be sus_list ["bussin", "slay", "no cap", "fr fr", "rizz"]
+
+yeet "The vibes today:"
+no_cap len be no_thoughts vibes
+lowkey idx be 0
+slay idx < len {
+    yeet drip vibes[idx]
+    hits_diff idx be idx + 1
+}
+
+rent_free Range loop
+yeet "Countdown:"
+no_cap nums be sheesh(1, 6)
+lowkey j be 0
+slay j < no_thoughts nums {
+    yeet drip nums[j]
+    hits_diff j be j + 1
+}
+
+rent_free Push to array
+lowkey squad be sus_list []
+glow_up squad "alice"
+glow_up squad "bob"
+glow_up squad "charlie"
+yeet "The squad:"
+lowkey k be 0
+slay k < no_thoughts squad {
+    yeet drip squad[k]
+    hits_diff k be k + 1
+}

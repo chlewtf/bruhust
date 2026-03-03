@@ -1,0 +1,18 @@
+rent_free Match/switch with vibe_check
+
+no_cap mood be "slay"
+
+vibe_check mood {
+    facts: "slay" => {
+        yeet "bestie is absolutely slaying rn 👑"
+    }
+    facts: "mid" => {
+        yeet "it's giving mid energy ngl"
+    }
+    facts: "rizz" => {
+        yeet "unmatched rizz detected 😤"
+    }
+    cap: => {
+        yeet "idk what that vibe is bestie"
+    }
+}

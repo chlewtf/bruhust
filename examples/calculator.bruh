@@ -1,0 +1,29 @@
+rent_free Simple calculator
+
+sus add(a, b) {
+    bet a + b
+}
+
+sus sub(a, b) {
+    bet a - b
+}
+
+sus mul(a, b) {
+    bet a * b
+}
+
+sus divide(a, b) {
+    fr_fr b == 0 {
+        yeet "division by zero? that's not bussin 💀"
+        bet understood
+    }
+    bet a / b
+}
+
+yeet "Calculator is bussin:"
+yeet "10 + 5 = " + vibe rizz add(10, 5)
+yeet "10 - 3 = " + vibe rizz sub(10, 3)
+yeet "6 * 7 = " + vibe rizz mul(6, 7)
+yeet "15 / 4 = " + vibe rizz divide(15, 4)
+yeet "10 / 0 = "
+rizz divide(10, 0)

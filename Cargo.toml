@@ -1,0 +1,9 @@
+[package]
+name = "bruhust"
+version = "0.1.0"
+edition = "2021"
+description = "Bruhust - A Gen Z programming language with .bruh files"
+
+[[bin]]
+name = "bruhust"
+path = "src/main.rs"
