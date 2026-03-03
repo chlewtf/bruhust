@@ -65,7 +65,7 @@ pub enum Token {
     Newline,
     Semicolon,
 
-    EOF,
+    Eof,
 }
 
 pub fn tokenize(source: &str) -> Result<Vec<Token>, String> {
@@ -247,7 +247,7 @@ pub fn tokenize(source: &str) -> Result<Vec<Token>, String> {
         i += 1;
     }
 
-    tokens.push(Token::EOF);
+    tokens.push(Token::Eof);
     Ok(tokens)
 }
 
@@ -287,9 +287,9 @@ mod tests {
 
     #[test]
     fn lex_number() {
-        let t = tok("42 3.14");
+        let t = tok("42 1.23");
         assert!(t.contains(&Token::Number(42.0)));
-        assert!(t.contains(&Token::Number(3.14)));
+        assert!(t.contains(&Token::Number(1.23)));
     }
 
     #[test]
