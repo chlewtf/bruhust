@@ -177,19 +177,20 @@ impl Interpreter {
                         break;
                     }
                     let mut inner = local.clone();
-                    match self.exec_block(body, &mut inner, global)? {
+                    let signal = self.exec_block(body, &mut inner, global)?;
+
+                    // propagate mutable vars back
+                    for (k, v) in &inner {
+                        if v.1 && local.contains_key(k) {
+                            local.insert(k.clone(), v.clone());
+                        }
+                    }
+
+                    match signal {
                         Some(Signal::Break) => break,
                         Some(Signal::Continue) => continue,
                         Some(sig) => return Ok(Some(sig)),
                         None => {}
-                    }
-                    // propagate mutable vars back
-                    for (k, v) in &inner {
-                        if v.1 {
-                            if local.contains_key(k) {
-                                local.insert(k.clone(), v.clone());
-                            }
-                        }
                     }
                 }
                 Ok(None)

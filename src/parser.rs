@@ -113,14 +113,6 @@ impl Parser {
         &self.tokens[self.pos]
     }
 
-    fn peek2(&self) -> &Token {
-        if self.pos + 1 < self.tokens.len() {
-            &self.tokens[self.pos + 1]
-        } else {
-            &Token::EOF
-        }
-    }
-
     fn advance(&mut self) -> Token {
         let t = self.tokens[self.pos].clone();
         if self.pos < self.tokens.len() - 1 {
@@ -152,7 +144,7 @@ impl Parser {
         self.expect(&Token::LBrace)?;
         self.skip_newlines();
         let mut stmts = Vec::new();
-        while !matches!(self.peek(), Token::RBrace | Token::EOF) {
+        while !matches!(self.peek(), Token::RBrace | Token::Eof) {
             let s = self.parse_stmt()?;
             stmts.push(s);
             self.skip_newlines();
@@ -227,7 +219,7 @@ impl Parser {
                 let name = self.parse_ident()?;
                 self.expect(&Token::LParen)?;
                 let mut params = Vec::new();
-                while !matches!(self.peek(), Token::RParen | Token::EOF) {
+                while !matches!(self.peek(), Token::RParen | Token::Eof) {
                     params.push(self.parse_ident()?);
                     if matches!(self.peek(), Token::Comma) {
                         self.advance();
@@ -271,7 +263,7 @@ impl Parser {
                 self.expect(&Token::LBrace)?;
                 self.skip_newlines();
                 let mut arms = Vec::new();
-                while !matches!(self.peek(), Token::RBrace | Token::EOF) {
+                while !matches!(self.peek(), Token::RBrace | Token::Eof) {
                     let pattern = if matches!(self.peek(), Token::Cap) {
                         self.advance();
                         self.expect(&Token::Colon)?;
@@ -413,6 +405,14 @@ impl Parser {
                     expr: Box::new(e),
                 })
             }
+            Token::Minus => {
+                self.advance();
+                let e = self.parse_unary()?;
+                Ok(Expr::UnOp {
+                    op: UnOp::Neg,
+                    expr: Box::new(e),
+                })
+            }
             _ => self.parse_postfix(),
         }
     }
@@ -500,7 +500,7 @@ impl Parser {
                 self.advance();
                 self.expect(&Token::LBracket)?;
                 let mut items = Vec::new();
-                while !matches!(self.peek(), Token::RBracket | Token::EOF) {
+                while !matches!(self.peek(), Token::RBracket | Token::Eof) {
                     items.push(self.parse_expr()?);
                     if matches!(self.peek(), Token::Comma) {
                         self.advance();
@@ -512,7 +512,7 @@ impl Parser {
             Token::LBracket => {
                 self.advance();
                 let mut items = Vec::new();
-                while !matches!(self.peek(), Token::RBracket | Token::EOF) {
+                while !matches!(self.peek(), Token::RBracket | Token::Eof) {
                     items.push(self.parse_expr()?);
                     if matches!(self.peek(), Token::Comma) {
                         self.advance();
@@ -526,7 +526,7 @@ impl Parser {
                 let name = self.parse_ident()?;
                 self.expect(&Token::LParen)?;
                 let mut args = Vec::new();
-                while !matches!(self.peek(), Token::RParen | Token::EOF) {
+                while !matches!(self.peek(), Token::RParen | Token::Eof) {
                     args.push(self.parse_expr()?);
                     if matches!(self.peek(), Token::Comma) {
                         self.advance();
@@ -542,7 +542,7 @@ impl Parser {
                 if matches!(self.peek(), Token::LParen) {
                     self.advance();
                     let mut args = Vec::new();
-                    while !matches!(self.peek(), Token::RParen | Token::EOF) {
+                    while !matches!(self.peek(), Token::RParen | Token::Eof) {
                         args.push(self.parse_expr()?);
                         if matches!(self.peek(), Token::Comma) {
                             self.advance();
@@ -569,7 +569,7 @@ pub fn parse(tokens: Vec<Token>) -> Result<Vec<Stmt>, String> {
     let mut parser = Parser::new(tokens);
     let mut stmts = Vec::new();
     parser.skip_newlines();
-    while !matches!(parser.peek(), Token::EOF) {
+    while !matches!(parser.peek(), Token::Eof) {
         stmts.push(parser.parse_stmt()?);
         parser.skip_newlines();
     }

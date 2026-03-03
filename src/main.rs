@@ -13,7 +13,7 @@ fn main() {
         eprintln!("bruhust v0.1.0 - no cap fr fr");
         eprintln!("Usage: bruhust <file.bruh>");
         eprintln!("       bruhust --repl");
-        eprintln!("");
+        eprintln!();
         eprintln!("Keyword cheat sheet:");
         eprintln!("  yeet <val>              => print");
         eprintln!("  no_cap x be 42          => let x = 42");
